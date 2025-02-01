@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    /* Bundler mode for build */
+    "jsx": "react-jsx",
+    "target": "ES2022",
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "NodeNext",
+    "sourceMap": false,
+    "declaration": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "template.design.system",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "lint": "biome check --write --no-errors-on-unmatched .",
+    "build": "tsup",
+    "commit": "git-cz",
+    "build:storybook": "storybook build"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.5",
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "0.416.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-themes": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/react": "^8.5.3",
+    "@storybook/react-vite": "^8.5.3",
+    "@storybook/test": "^8.5.3",
+    "@types/node": "^22.13.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "globals": "^15.14.0",
+    "lint-staged": "^15.4.3",
+    "postcss": "^8.5.1",
+    "storybook": "^8.5.3",
+    "tailwindcss": "3.4.17",
+    "tsup": "^8.3.6",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
