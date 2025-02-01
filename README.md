@@ -1,6 +1,6 @@
 # Template Design System
 
-> Um design system baseado em React, Radix UI, e TailwindCSS, com integração com Storybook para desenvolvimento e visualização de componentes.
+> Um design system baseado em React, Radix UI, e TailwindCSS, com integração com Storybook para desenvolvimento e visualização de componentes
 
 ## Índice
 
