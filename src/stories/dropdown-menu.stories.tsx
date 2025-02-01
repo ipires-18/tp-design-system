@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,8 +11,9 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger, } from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Components/DropdownMenu',
@@ -27,9 +28,9 @@ export const Default: Story = {
   render: () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant='outline'>Open</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className='w-56'>
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
@@ -80,5 +81,5 @@ export const Default: Story = {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  ),
 };

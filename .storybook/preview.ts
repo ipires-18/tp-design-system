@@ -1,11 +1,11 @@
-import type { Preview, ReactRenderer } from "@storybook/react";
 import { withThemeByClassName } from '@storybook/addon-themes';
+import type { Preview, ReactRenderer } from '@storybook/react';
 
-import '../src/styles/index.css'
+import '../src/styles/index.css';
 
 const preview: Preview = {
   parameters: {
-    layout:'centered'
+    layout: 'centered',
   },
   decorators: [
     withThemeByClassName<ReactRenderer>({
@@ -15,7 +15,7 @@ const preview: Preview = {
       },
       defaultTheme: 'dark',
     }),
-   ]
+  ],
 };
 
 export default preview;

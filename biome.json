@@ -27,7 +27,13 @@
     }
   },
   "files": {
-    "ignore": ["node_modules"]
+    "ignore": [
+      "node_modules",
+      "./tsconfig.app.json",
+      "./tsconfig.build.json",
+      "./tsconfig.json",
+      "./tsconfig.node.json"
+    ]
   },
   "vcs": {
     "enabled": true,
