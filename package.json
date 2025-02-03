@@ -1,7 +1,23 @@
 {
   "name": "template.design.system",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
+  "files": ["build"],
+  "main": "./build/index.mjs",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.mts",
+  "exports":{
+    ".":{
+      "import":"./build/index.d.mts",
+      "default":"./build/index.d.mts",
+      "require":"./build/index.d.mts",
+      "types": "./build/index.d.mts"
+    },
+    "./styles.css":"./build/index.css"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
     "dev": "storybook dev -p 6006",
     "lint": "biome check --write --no-errors-on-unmatched .",
@@ -22,10 +38,10 @@
     "lucide-react": "0.416.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
+    "tailwindcss-animate": "^1.0.7",
     "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
