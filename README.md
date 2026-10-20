@@ -16,6 +16,30 @@
 
 Este projeto é um design system modular para facilitar a criação de interfaces consistentes e reutilizáveis. Ele inclui componentes baseados em bibliotecas modernas como **Radix UI** e **Lucide React**, integrados com **TailwindCSS** para estilização e **Storybook** para desenvolvimento isolado de componentes.
 
+## Uso como pacote
+
+O pacote é publicado no [GitHub Packages](https://github.com/ipires-18/tp-design-system/pkgs/npm/tp-design-system). Para instalar, crie um `.npmrc` na raiz do projeto consumidor com um token do GitHub que tenha o escopo `read:packages`:
+
+```
+@ipires-18:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
+
+```bash
+npm install @ipires-18/tp-design-system
+```
+
+```tsx
+import '@ipires-18/tp-design-system/styles.css';
+import { Button } from '@ipires-18/tp-design-system';
+
+export function App() {
+  return <Button>Clique aqui</Button>;
+}
+```
+
+> `react` e `react-dom` (18 ou 19) são peer dependencies.
+
 ## Instalação
 
 ### Requisitos
@@ -79,3 +103,10 @@ yarn lint
   - PostCSS: Processador de CSS.
   - Tsup: Bundler para gerar a versão final do código.
   - Biome: Ferramenta para análise de código e linting.
+
+## Publicação
+
+A publicação é feita pelo workflow `.github/workflows/publish.yml`. Para lançar uma versão:
+
+1. Atualize o campo `version` no `package.json` (ex.: `npm version minor`).
+2. Faça push e crie uma Release no GitHub — o workflow roda os testes, gera o build e publica no GitHub Packages.
